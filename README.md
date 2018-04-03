@@ -1,9 +1,6 @@
-# core-api-documentation
-JSON/REST API Documentation for Energi Core
-
 # Addressindex
 
-## `getaddressbalance`
+## getaddressbalance
 
 Returns the balance for an address(es) (requires addressindex to be enabled).
 
@@ -26,7 +23,7 @@ Returns the balance for an address(es) (requires addressindex to be enabled).
 }
 ```
 
-#### #### Examples:
+#### Examples:
 ```
 > energi-cli getaddressbalance '{"addresses": ["XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"]}'
 ```
@@ -66,7 +63,7 @@ Returns all changes for an address (requires addressindex to be enabled).
 ]
 ```
 
-#### #### Examples:
+#### Examples:
 ```
 > energi-cli getaddressdeltas '{"addresses": ["XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"]}'
 ```
