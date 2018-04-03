@@ -1,9 +1,6 @@
-# core-api-documentation
-JSON/REST API Documentation for Energi Core
-
 # Addressindex
 
-## `getaddressbalance`
+## getaddressbalance
 
 Returns the balance for an address(es) (requires addressindex to be enabled).
 
@@ -26,7 +23,7 @@ Returns the balance for an address(es) (requires addressindex to be enabled).
 }
 ```
 
-#### #### Examples:
+#### Examples:
 ```
 > energi-cli getaddressbalance '{"addresses": ["XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"]}'
 ```
@@ -66,7 +63,7 @@ Returns all changes for an address (requires addressindex to be enabled).
 ]
 ```
 
-#### #### Examples:
+#### Examples:
 ```
 > energi-cli getaddressdeltas '{"addresses": ["XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"]}'
 ```
@@ -479,13 +476,13 @@ Return information about all known tips in the block tree, including the main ch
     "status": "xxxx"            (string) status of the chain (active, valid-fork, valid-headers, headers-only, invalid)
   }
 ]
+```
 Possible values for status:
 1.  "invalid"               This branch contains at least one invalid block
 2.  "headers-only"          Not all blocks for this branch are available, but the headers are valid
 3.  "valid-headers"         All blocks are available for this branch, but they were never fully validated
 4.  "valid-fork"            This branch is not part of the active chain, but is fully validated
 5.  "active"                This is the tip of the active main chain, which is certainly valid
-```
 
 #### Examples:
 ```
@@ -2727,8 +2724,9 @@ Adds a private key (as returned by dumpprivkey) to your wallet.
 2. "label"            (string, optional, default="") An optional label
 3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions
 
-Note: This call can take minutes to complete if rescan is true.
 ```
+Note: This call can take minutes to complete if rescan is true.
+
 
 #### Examples:
 
@@ -2762,8 +2760,8 @@ Adds a public key (in hex) that can be watched as if it were in your wallet but 
 2. "label"            (string, optional, default="") An optional label
 3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions
 
-Note: This call can take minutes to complete if rescan is true.
 ```
+Note: This call can take minutes to complete if rescan is true.
 
 #### Examples:
 
@@ -2856,7 +2854,8 @@ Fills the keypool.
 ```
 
 #### Examples:
-```> energi-cli keypoolrefill
+```
+> energi-cli keypoolrefill
 ```
 ```
 > curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:9796/
